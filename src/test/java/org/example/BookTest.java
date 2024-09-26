@@ -15,5 +15,14 @@ public class BookTest {
         assertFalse(book.isBorrowed());
     }
 
+
+
+    @Test
+    public void testReturnBook() {
+        Book book = new Book("978-3-16-148410-0", "Effective Java", "Joshua Bloch", 2008);
+        book.borrowBook();
+        book.returnBook();
+        assertFalse(book.isBorrowed());
+    }
 }
 
